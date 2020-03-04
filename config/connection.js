@@ -1,26 +1,15 @@
-const mysql = require("mysql");
-const PSWD = process.env.MYSQL_PSWD;
-let connection;
+const Sequelize = require('sequelize');
 
-if (process.env.JAWSDB_URL) {
-  connection = mysql.createConnection(process.env.JAWSDB_URL);
-} else {
-  connection = mysql.createConnection({
-    host: "localhost",
-    port: 3306,
-    user: "root",
-    password: PSWD,
-    database: "character_db"
-  });
-}
+module.exports = new Sequelize('characters_db', 'root', '5eku+aya', {
+  host: 'localhost',
+  dialect: 'mysql',
+  operatorAliases: false;
 
-// Make connection.
-connection.connect(function(err) {
-  if (err) {
-    console.error("error connecting: " + err.stack);
-    return;
+  pool: {
+    max: 5,
+    min: 0,
+    acquire: 30000,
+    idle: 10000
   }
-  console.log("connected as id " + connection.threadId);
-})
+});
 
-module.exports = connection;
