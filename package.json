@@ -1,4 +1,4 @@
-{
+npm {
   "name": "project2",
   "version": "1.0.0",
   "main": "index.js",
@@ -18,7 +18,10 @@
   },
   "homepage": "https://github.com/FlashOTFR/project2#readme",
   "dependencies": {
-    "eslint": "^6.8.0"
+    "eslint": "^6.8.0",
+    "express": "^4.17.1",
+    "mysql": "^2.18.1",
+    "sequelize": "^5.21.5"
   },
   "devDependencies": {},
   "description": ""
