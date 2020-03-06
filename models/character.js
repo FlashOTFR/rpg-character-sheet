@@ -1,69 +1,206 @@
-//Dependencies
-const Sequelize = require("sequelize");
-const sequelize = require("../config/connection");
 
-//Model
-const Character = sequelize.define("character", 
-  name: DataType.STRING,
-  class: DataType.STRING,
-  level: DataType.INT,
-  background: DataType.STRING,
-  player_name: DataType.STRING,
-  faction: DataType.STRING,
-  race: DataType.STRING,
-  alignment: DataType.STRING,
-  exp: DataType.INT,
-  inspiration: DataType.STRING,
-  strength: DataType.INT,
-  dexterity: DataType.INT,
-  constitution: DataType.INT,
-  intelligence: DataType.INT,
-  wisdom: DataType.INT,
-  charisma_st: DataType.STRING,
-  strength_st: DataType.INT,
-  dexterity_st: DataType.INT,
-  constitution_st: DataType.INT,
-  intelligence_st: DataType.INT,
-  wisdom_st: DataType.INT,
-  armor_class: DataType.STRING,
-  initiative: DataType.STRING,
-  speech: DataType.STRING,
-  current_hp: DataType.STRING,
-  temp_hp: DataType.STRING,
-  personality_traits: DataType.STRING,
-  ideals: DataType.STRING,
-  bonds: DataType.STRING,
-  flaws: DataType.STRING,
-  attacks_and_spellcasting: DataType.STRING,
-  passive_wisdom: DataType.STRING,
-  equipment: DataType.STRING,
-  features_and_traits: DataType.STRING,
-  other_proficiencies_and_languages: DataType.STRING,
-  age: DataType.INT,
-  height: DataType.INT,
-  weight: DataType.INT,
-  eyes: DataType.STRING,
-  skin: DataType.STRING,
-  hair: DataType.STRING,
-  acrobatics: DataType.INT,
-  animal_handling: DataType.INT,
-  arcana: DataType.INT,
-  athletics: DataType.INT,
-  deception: DataType.INT,
-  history: DataType.INT,
-  insight: DataType.INT,
-  intimidation: DataType.INT,
-  investigation: DataType.INT,
-  medicine: DataType.INT,
-  nature: DataType.INT,
-  perception: DataType.INT,
-  performance: DataType.INT,
-  persuasion: DataType.INT,
-  religion: DataType.INT,
-  slight_of_hand: DataType.INT,
-  stealth: DataType.INT,
-  survival: DataType.INT
-  //fields will go here once we figure out what they are.
-});
+module.exports = (sequelize, DataTypes) => {
+  return sequelize.define('character', {
+    name: {
+      type: DataTypes.STRING
+    },
+    class: {
+      type: DataTypes.STRING
+    },
+    level: {
+      type: DataTypes.INTEGER
+    },
+    background: {
+      type: DataTypes.STRING
+    },
+    player_name: {
+      type: DataTypes.STRING
+    },
+    faction: {
+      type: DataTypes.STRING
+    },
+    race: {
+      type: DataTypes.STRING
+    },
+    alignment: {
+      type: DataTypes.STRING
+    },
+    exp: {
+      type: DataTypes.INTEGER
+    },
+    inspiration: {
+      type: DataTypes.STRING
+    },
+    strength: {
+      type: DataTypes.INTEGER
+    },
+    dexterity: {
+      type: DataTypes.INTEGER
+    },
+    constitution: {
+      type: DataTypes.INTEGER
+    },
+    intelligence: {
+      type: DataTypes.INTEGER
+    },
+    wisdom: {
+      type: DataTypes.INTEGER
+    },
+    charisma: {
+      type: DataTypes.STRING
+    },
+    strength_st: {
+      type: DataTypes.INTEGER
+    },
+    dexterity_st: {
+      type: DataTypes.INTEGER
+    },
+    constitution_st: {
+      type: DataTypes.INTEGER
+    },
+    intelligence_st: {
+      type: DataTypes.INTEGER
+    },
+    wisdom_st: {
+      type: DataTypes.INTEGER
+    },
+    charisma_st: {
+      type: DataTypes.INTEGER
+    },
+    armor_class: {
+      type: DataTypes.STRING
+    },
+    initiative: {
+      type: DataTypes.STRING
+    },
+    speed: {
+      type: DataTypes.STRING
+    },
+    current_hp: {
+      type: DataTypes.STRING
+    },
+    temp_hp: {
+      type: DataTypes.STRING
+    },
+    personality_traits: {
+      type: DataTypes.STRING
+    },
+  
+    ideals: {
+      type: DataTypes.STRING
+    },
+    bonds: {
+      type: DataTypes.STRING
+    },
+    flaws: {
+      type: DataTypes.STRING
+    },
+    attacks_and_spellcasting: {
+      type: DataTypes.STRING
+    },
+    passive_wisdom: {
+      type: DataTypes.STRING
+    },
+    equipment: {
+      type: DataTypes.STRING
+    },
+    features_and_traits: {
+      type: DataTypes.STRING
+    },
+    other_proficiencies_and_languages: {
+      type: DataTypes.STRING
+    },
+    age: {
+      type: DataTypes.INTEGER
+    },
+    height: {
+      type: DataTypes.INTEGER
+    },
+    weight: {
+      type: DataTypes.INTEGER
+    },
+    eyes: {
+      type: DataTypes.STRING
+    },
+    skin: {
+      type: DataTypes.STRING
+    },
+    hair: {
+      type: DataTypes.STRING
+    },
+  
+    acrobatics: {
+      type: DataTypes.INTEGER
+    },
+  
+    animal_handling: {
+      type: DataTypes.INTEGER
+    },
+  
+    arcana: {
+      type: DataTypes.INTEGER
+    },
+  
+    athletics: {
+      type: DataTypes.INTEGER
+    },
+  
+    deception: {
+      type: DataTypes.INTEGER
+    },
+  
+    history: {
+      type: DataTypes.INTEGER
+    },
+  
+    insight: {
+      type: DataTypes.INTEGER
+    },
+  
+    intimidation: {
+      type: DataTypes.INTEGER
+    },
+  
+    investigation: {
+      type: DataTypes.INTEGER
+    },
+  
+    medicine: {
+      type: DataTypes.INTEGER
+    },
+  
+    nature: {
+      type: DataTypes.INTEGER
+    },
+  
+    perception: {
+      type: DataTypes.INTEGER
+    },
+  
+    performance: {
+      type: DataTypes.INTEGER
+    },
+  
+    persuasion: {
+      type: DataTypes.INTEGER
+    },
+  
+    religion: {
+      type: DataTypes.INTEGER
+    },
+  
+    sleight_of_hand: {
+      type: DataTypes.INTEGER
+    },
+  
+    stealth: {
+      type: DataTypes.INTEGER
+    },
+  
+    survival: {
+      type: DataTypes.INTEGER
+    }
+  });
+};
 
-module.exports = Character;
+

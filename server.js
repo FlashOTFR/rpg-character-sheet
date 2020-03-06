@@ -8,16 +8,28 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-//Get LANDING PAGE
+//Middleware
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+//Handlebars
+app.engine('handlebars', exphbs({ defaultLayout: 'main'}));
+app.set('view engine', 'handlebars');
+
+//Set static folder
+app.use(express.static(path.join(__dirname, 'public')));
+
+
+//HTML Routes
 app.get('/', (req, res) => res.send('LANDING PAGE HERE'));
 
 //Database
-const db = require('./config/connection');
+const connection = require('./config/connection');
 
 //Database connection test
-db.authenticate().then(() => console.log('Database Connected...')).catch(err => console.log('Error' + err));
+connection.authenticate().then(() => console.log('Database Connected...')).catch(err => console.log('Error' + err));
 
 
-app.use('/characters', require('./routes/characters'));
+require(`./routes/characters.js`)(app);
 //Server listener
 app.listen(PORT, console.log(`Server started on port ${PORT}`));

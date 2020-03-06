@@ -2,16 +2,29 @@
 
 const express = require('express');
 const router = express.Router();
-const db = require('../config/connection');
-const Character = require('../models/character');
+const connection = require('../config/connection');
+const db = require('../models/index');
 
-router.get('/', (req, res) =>
-Character.findAll()
-.then(characters => {
-    console.log(characters.title);
-    res.sendStatus(200);
+module.exports = app => {
+
+//Get all characters
+app.get('/characters', (req, res) =>
+db.character.findAll()
+.then(dbcharacters => {
+    console.log(dbcharacters);
+    res.render('characters', {
+        dbcharacters
+    });
 })
 .catch(err => console.log(err)));
 
-module.exports = router;
+//Add a character
+// app.get('/add', (req, res) => {
 
+// })
+
+// Character.create({
+
+// }).then(character => res.redirect('/characters'))
+// .catch(err => console.log(err));
+};

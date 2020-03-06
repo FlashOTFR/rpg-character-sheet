@@ -68,6 +68,7 @@ CREATE TABLE characters (
     sleight_of_hand INT,
     stealth INT,
     survival INT,
-    createdAt TIMESTAMP,
+    createdAt TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updatedAt TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
     PRIMARY KEY(id)
 );
