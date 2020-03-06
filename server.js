@@ -21,7 +21,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 //HTML Routes
-app.get('/', (req, res) => res.send('LANDING PAGE HERE'));
+app.get('/', (req, res) => res.render('home'));
 
 //Database
 const connection = require('./config/connection');

@@ -1,7 +1,16 @@
-<h1>characters test</h1>
+<section id="characters" class="container">
+    <h1>All Characters</h1>
 
-{{#each characters}}
-<h1></h1>
-{{else}}
-<p>There are no characters available</p>
-{{/each}}
+    {{#each dbcharacters}}
+      <div class="character">
+      <h3>{{name}}</h3>
+      <p>{{class}}</p>
+      <ul>
+        <li>Level: {{level}}</li>
+        <li>{{current_hp}}</li>
+      </ul>
+    {{else}}
+      <p>No characters available</p>
+    {{/each}}
+    
+  </section>
