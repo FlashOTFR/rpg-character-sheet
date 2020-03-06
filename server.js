@@ -8,6 +8,10 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+//Middleware
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
 //Handlebars
 app.engine('handlebars', exphbs({ defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
@@ -16,7 +20,7 @@ app.set('view engine', 'handlebars');
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-//Get LANDING PAGE
+//HTML Routes
 app.get('/', (req, res) => res.send('LANDING PAGE HERE'));
 
 //Database
