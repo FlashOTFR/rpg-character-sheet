@@ -8,6 +8,14 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+//Handlebars
+app.engine('handlebars', exphbs({ defaultLayout: 'main'}));
+app.set('view engine', 'handlebars');
+
+//Set static folder
+app.use(express.static(path.join(__dirname, 'public')));
+
+
 //Get LANDING PAGE
 app.get('/', (req, res) => res.send('LANDING PAGE HERE'));
 
