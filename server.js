@@ -12,10 +12,10 @@ const PORT = process.env.PORT || 3000;
 app.get('/', (req, res) => res.send('LANDING PAGE HERE'));
 
 //Database
-const db = require('./config/connection');
+const connection = require('./config/connection');
 
 //Database connection test
-db.authenticate().then(() => console.log('Database Connected...')).catch(err => console.log('Error' + err));
+connection.authenticate().then(() => console.log('Database Connected...')).catch(err => console.log('Error' + err));
 
 
 app.use('/characters', require('./routes/characters'));

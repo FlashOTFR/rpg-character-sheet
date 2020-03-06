@@ -2,13 +2,13 @@
 
 const express = require('express');
 const router = express.Router();
-const db = require('../config/connection');
+const connection = require('../config/connection');
 const Character = require('../models/character');
 
 router.get('/', (req, res) =>
-Character.findAll()
+db.Character.findAll()
 .then(characters => {
-    console.log(characters.title);
+    console.log(characters);
     res.sendStatus(200);
 })
 .catch(err => console.log(err)));

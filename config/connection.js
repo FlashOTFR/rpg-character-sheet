@@ -6,7 +6,6 @@ const Sequelize = require('sequelize');
 module.exports = new Sequelize('character_db', 'root', '5eku+aya', {
   host: 'localhost',
   dialect: 'mysql',
-  operatorAliases: false,
 
   pool: {
     max: 5,
