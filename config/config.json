@@ -1,26 +1,26 @@
 {
   "development": {
     "username": "root",
-    "password": "5eku+aya",
+    "password": "password",
     "database": "character_db",
     "host": "127.0.0.1",
-    "dialect": "mysql",
-    "operatorsAliases": false
+    "port": 3306,
+    "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": "5eku+aya",
-    "database": "character_db",
+    "password": "password",
+    "database": "character_test",
     "host": "127.0.0.1",
-    "dialect": "mysql",
-    "operatorsAliases": false
+    "port": 3306,
+    "dialect": "mysql"
   },
   "production": {
     "username": "root",
-    "password": "5eku+aya",
-    "database": "character_db",
+    "password": "password",
+    "database": "character_production",
     "host": "127.0.0.1",
-    "dialect": "mysql",
-    "operatorsAliases": false
+    "port": 3306,
+    "dialect": "mysql"
   }
 }
