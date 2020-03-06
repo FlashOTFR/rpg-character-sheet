@@ -3,204 +3,66 @@ const Sequelize = require("sequelize");
 const db = require("../config/connection");
 
 //Model
-const Character = db.define("character", {
-  character_name: {
-    type: datatype.STRING
-  },
-  class: {
-    type: datatype.STRING
-  },
-  level: {
-    type: datatype.INT
-  },
-  background: {
-    type: datatype.STRING
-  },
-  player_name: {
-    type: datatype.STRING
-  },
-  faction: {
-    type: datatype.STRING
-  },
-  race: {
-    type: datatype.STRING
-  },
-  alignment: {
-    type: datatype.STRING
-  },
-  exp: {
-    type: datatype.INT
-  },
-  inspiration: {
-    type: datatype.STRING
-  },
-  strength: {
-    type: datatype.INT
-  },
-  dexterity: {
-    type: datatype.INT
-  },
-  constitution: {
-    type: datatype.INT
-  },
-  intelligence: {
-    type: datatype.INT
-  },
-  wisdom: {
-    type: datatype.INT
-  },
-  charisma_st: {
-    type: datatype.STRING
-  },
-  strength_st: {
-    type: datatype.INT
-  },
-  dexterity_st: {
-    type: datatype.INT
-  },
-  constitution_st: {
-    type: datatype.INT
-  },
-  intelligence_st: {
-    type: datatype.INT
-  },
-  wisdom_st: {
-    type: datatype.INT
-  },
-  armor_class: {
-    type: datatype.STRING
-  },
-  initiative: {
-    type: datatype.STRING
-  },
-  speech: {
-    type: datatype.STRING
-  },
-  current_hp: {
-    type: datatype.STRING
-  },
-  temp_hp: {
-    type: datatype.STRING
-  },
-  personality_traits: {
-    type: datatype.STRING
-  },
-
-  ideals: {
-    type: datatype.STRING
-  },
-  bonds: {
-    type: datatype.STRING
-  },
-  flaws: {
-    type: datatype.STRING
-  },
-  attacks_and_spellcasting: {
-    type: datatype.STRING
-  },
-  passive_wisdom: {
-    type: datatype.STRING
-  },
-  equipment: {
-    type: datatype.STRING
-  },
-  features_and_traits: {
-    type: datatype.STRING
-  },
-  other_proficiencies_and_languages: {
-    type: datatype.STRING
-  },
-  age: {
-    type: datatype.INT
-  },
-  height: {
-    type: datatype.INT
-  },
-  weight: {
-    type: datatype.INT
-  },
-  eyes: {
-    type: datatype.STRING
-  },
-  skin: {
-    type: datatype.STRING
-  },
-  hair: {
-    type: datatype.STRING
-  },
-
-  acrobatics: {
-    type: datatype.INT
-  },
-
-  animal_handling: {
-    type: datatype.INT
-  },
-
-  arcana: {
-    type: datatype.INT
-  },
-
-  athletics: {
-    type: datatype.INT
-  },
-
-  deception: {
-    type: datatype.INT
-  },
-
-  history: {
-    type: datatype.INT
-  },
-
-  insight: {
-    type: datatype.INT
-  },
-
-  intimidation: {
-    type: datatype.INT
-  },
-
-  investigation: {
-    type: datatype.INT
-  },
-
-  medicine: {
-    type: datatype.INT
-  },
-
-  nature: {
-    type: datatype.INT
-  },
-
-  perception: {
-    type: datatype.INT
-  },
-
-  performance: {
-    type: datatype.INT
-  },
-
-  persuasion: {
-    type: datatype.INT
-  },
-
-  religion: {
-    type: datatype.INT
-  },
-
-  slight_of_hand: {
-    type: datatype.INT
-  },
-
-  stealth: {
-    type: datatype.INT
-  },
-
-  survival: {
-    type: datatype.INT
-  }
-
+const Character = db.define("character", 
+  name: DataType.STRING,
+  class: DataType.STRING,
+  level: DataType.INT,
+  background: DataType.STRING,
+  player_name: DataType.STRING,
+  faction: DataType.STRING,
+  race: DataType.STRING,
+  alignment: DataType.STRING,
+  exp: DataType.INT,
+  inspiration: DataType.STRING,
+  strength: DataType.INT,
+  dexterity: DataType.INT,
+  constitution: DataType.INT,
+  intelligence: DataType.INT,
+  wisdom: DataType.INT,
+  charisma_st: DataType.STRING,
+  strength_st: DataType.INT,
+  dexterity_st: DataType.INT,
+  constitution_st: DataType.INT,
+  intelligence_st: DataType.INT,
+  wisdom_st: DataType.INT,
+  armor_class: DataType.STRING,
+  initiative: DataType.STRING,
+  speech: DataType.STRING,
+  current_hp: DataType.STRING,
+  temp_hp: DataType.STRING,
+  personality_traits: DataType.STRING,
+  ideals: DataType.STRING,
+  bonds: DataType.STRING,
+  flaws: DataType.STRING,
+  attacks_and_spellcasting: DataType.STRING,
+  passive_wisdom: DataType.STRING,
+  equipment: DataType.STRING,
+  features_and_traits: DataType.STRING,
+  other_proficiencies_and_languages: DataType.STRING,
+  age: DataType.INT,
+  height: DataType.INT,
+  weight: DataType.INT,
+  eyes: DataType.STRING,
+  skin: DataType.STRING,
+  hair: DataType.STRING,
+  acrobatics: DataType.INT,
+  animal_handling: DataType.INT,
+  arcana: DataType.INT,
+  athletics: DataType.INT,
+  deception: DataType.INT,
+  history: DataType.INT,
+  insight: DataType.INT,
+  intimidation: DataType.INT,
+  investigation: DataType.INT,
+  medicine: DataType.INT,
+  nature: DataType.INT,
+  perception: DataType.INT,
+  performance: DataType.INT,
+  persuasion: DataType.INT,
+  religion: DataType.INT,
+  slight_of_hand: DataType.INT,
+  stealth: DataType.INT,
+  survival: DataType.INT
   //fields will go here once we figure out what they are.
 });
 
