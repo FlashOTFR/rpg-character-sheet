@@ -1,9 +1,9 @@
 //Dependencies
 const Sequelize = require("sequelize");
-const db = require("../config/connection");
+const sequelize = require("../config/connection");
 
 //Model
-const Character = db.define("character", 
+const Character = sequelize.define("character", 
   name: DataType.STRING,
   class: DataType.STRING,
   level: DataType.INT,
