@@ -18,6 +18,6 @@ const connection = require('./config/connection');
 connection.authenticate().then(() => console.log('Database Connected...')).catch(err => console.log('Error' + err));
 
 
-app.use('/characters', require('./routes/characters'));
+require(`./routes/characters.js`)(app);
 //Server listener
 app.listen(PORT, console.log(`Server started on port ${PORT}`));

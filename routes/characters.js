@@ -3,15 +3,16 @@
 const express = require('express');
 const router = express.Router();
 const connection = require('../config/connection');
-const Character = require('../models/character');
+const db = require('../models/index');
 
-router.get('/', (req, res) =>
-db.Character.findAll()
-.then(characters => {
-    console.log(characters);
+module.exports = app => {
+app.get('/characters', (req, res) =>
+db.character.findAll()
+.then(dbCharacters => {
+    console.log(dbCharacters);
     res.sendStatus(200);
 })
 .catch(err => console.log(err)));
 
-module.exports = router;
 
+};
