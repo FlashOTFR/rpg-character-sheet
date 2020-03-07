@@ -85,6 +85,10 @@ module.exports = app => {
     res.send(200);
   });
 
+  app.get("/yourcharacter", (req, res) => {
+    res.render('singlechar');
+  });
+
   //Add a character
   // app.get('/add', (req, res) => {
 
