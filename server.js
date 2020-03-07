@@ -22,6 +22,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //HTML Routes
 app.get('/', (req, res) => res.render('home'));
+app.get('/dice', (req, res) => res.render('dice'));
 
 //Database
 const connection = require('./config/connection');
