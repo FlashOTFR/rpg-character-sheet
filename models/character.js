@@ -1,6 +1,4 @@
 
-
-
 module.exports = (sequelize, DataTypes) => {
   return sequelize.define('character', {
     name: {
@@ -204,4 +202,5 @@ module.exports = (sequelize, DataTypes) => {
     }
   });
 };
+
 
