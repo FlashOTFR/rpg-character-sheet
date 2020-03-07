@@ -19,6 +19,10 @@ module.exports = app => {
       .catch(err => console.log(err))
   );
 
+  app.get("/yourcharacter", (req, res) => {
+    res.render('singlechar');
+  });
+
   //Add a character
   // app.get('/add', (req, res) => {
 
