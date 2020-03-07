@@ -64,6 +64,6 @@ const Character = db.define("character",
   stealth: DataType.INT,
   survival: DataType.INT
   //fields will go here once we figure out what they are.
-});
+);
 
 module.exports = Character;
