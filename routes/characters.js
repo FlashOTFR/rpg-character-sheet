@@ -1,10 +1,9 @@
 "use strict";
 
-const express = require("express");
-// test router on this page
-const router = express.Router();
-const connection = require("../config/connection.js");
-const db = require("../models/index.js");
+
+const express = require('express');
+const connection = require('../config/connection');
+const db = require('../models/index');
 
 module.exports = app => {
   //Get all characters
