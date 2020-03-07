@@ -1,7 +1,6 @@
 "use strict";
 
 const express = require('express');
-const router = express.Router();
 const connection = require('../config/connection');
 const db = require('../models/index');
 
