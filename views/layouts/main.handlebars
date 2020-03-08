@@ -4,31 +4,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../../public/css/style.css">
+    <title>home page</title>
+
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../../css/style.css">
+
 </head>
 
 <body>
+    <!-- navbar -->
     <nav>
-        <div class="nav-wrapper">
-            <a href="../../public/assets/dndlogo.png" class="brand-logo center">Logo</a>
-            <ul class="left hide-on-med-and-down">
-                <li><a href="../home.handlebars">Home</a></li>
-                <li><a href="../characters.handlebars">Characters</a></li>
-                <li><a href="../dice.handlebars">Dice</a></li>
-                <li class="active"><a href="collapsible.html">JavaScript</a></li>
+        <div class="nav-wrapper black">
+            <a href="#"><img class="brand-logo" src="../../../assets/images/dndlogo.png" alt="" srcset=""></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Characters</a></li>
+                <li><a href="#">Dice</a></li>
             </ul>
         </div>
     </nav>
-    <div class="container">
-        {{{body}}}
-    </div>
+    
+
+    {{{body}}}
+
+
+    <footer class="page-footer black">
+        <div class="container">
+            <div class="row">
+                <div class="col m6 s12">
+                    <h5 class="white-text">About Us</h5>
+                    <p class="grey-text text-lighten-4">We are a team of college students working on this project like
+                        it's our full time job. <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla in
+                        illo
+                        dolorum a dignissimos molestiae hic totam fuga voluptatem. Nisi nihil culpa autem consectetur
+                        ullam tenetur error eligendi mollitia accusantium.
+                    </p>
+                </div>
+                <div class="col m6 s12">
+                    <h5 class="white-text center">Meet The Engineers</h5>
+                    <br>
+                    <div class="row">
+                        <div class="col m3 s12">
+                            <a href="https://github.com/ariehh1"></a><img class="teammate" src="../../../assets/images/Iss.JPG" alt=""
+                                srcset=""></a>
+                            <p class="center">Ari Horowitz</p>
+                        </div>
+                        <div class="col m3 s12">
+                            <a href="https://github.com/Vaughnsmcp"></a><img class="teammate" src="../../../assets/images/Iss.JPG" alt=""
+                                srcset=""></a>
+                            <p class="center">Vaughn McPherson</p>
+                        </div>
+                        <div class="col m3 s12">
+                            <a href="https://github.com/FlashOTFR"></a><img class="teammate" src="../../../assets/images/Iss.JPG" alt=""
+                                srcset=""></a>
+                            <p class="center">Randy Burgess</p>
+                        </div>
+                        <div class="col m3 s12">
+                            <a href="https://github.com/Issouf03"></a><img class="teammate" src="../../../assets/images/Iss.JPG" alt=""
+                                srcset=""></a>
+                            <p class="center">Issouf Kiema</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                <p class="white-text text-lighten-3 center">Copyright &copy; All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
 
 </body>
 
