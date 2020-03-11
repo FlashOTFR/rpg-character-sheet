@@ -1,10 +1,14 @@
-.brand-logo{
-    width: 140px;
-    height:auto;
+.brand-logo {
+  width: 140px;
+  height: auto;
 }
 
-.teammate{
-    width: 100px;
-    height: 100px;
-    border-radius: 50px;
+.teammate {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+}
+
+.valign-wrapper {
+  padding: 50px;
 }
