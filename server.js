@@ -13,12 +13,27 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 //Handlebars
+<<<<<<< Updated upstream
 app.engine('handlebars', exphbs({ defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
+=======
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
+
+//Body-Parser
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+>>>>>>> Stashed changes
 
 //Set static folder
 app.use(express.static(path.join(__dirname, 'public')));
 
+<<<<<<< Updated upstream
+=======
+//HTML Routes
+app.get("/", (req, res) => res.render("home"));
+app.get("/addchar", (req, res) => res.render("addchar"));
+>>>>>>> Stashed changes
 
 //HTML Routes
 app.get('/', (req, res) => res.render('home'));
