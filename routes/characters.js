@@ -22,7 +22,7 @@ module.exports = app => {
     res.render("addchar");
   });
 
-  app.post("/c", (req, res) => {
+  app.get("/c", (req, res) => {
     db.character.create({
       name: "Randy",
       class: "Rogue",
