@@ -1,14 +1,14 @@
 {
   "development": {
     "username": "root",
-    "password": "Blazers1",
+    "password": "password",
     "database": "character_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": "5eku+aya",
+    "password": "password",
     "database": "character_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
