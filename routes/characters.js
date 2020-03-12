@@ -1,12 +1,12 @@
-'use strict';
+"use strict";
 
-const express = require('express');
-const connection = require('../config/connection');
-const db = require('../models');
+const express = require("express");
+const connection = require("../config/connection");
+const db = require("../models");
 
 module.exports = app => {
   //Get all characters
-  app.get('/characters', (req, res) => {
+  app.get("/characters", (req, res) => {
     db.character
       .findAll()
       .then(characters => {
@@ -18,16 +18,20 @@ module.exports = app => {
       .catch(err => console.log(err));
   });
 
-  app.get('/c', (req, res) => {
+  app.get("/addchar", (req, res) => {
+    res.render("addchar");
+  });
+
+  app.post("/c", (req, res) => {
     db.character.create({
-      name: 'Randy',
-      class: 'Rogue',
+      name: "Randy",
+      class: "Rogue",
       level: 10,
-      background: 'No Background',
-      player_name: 'also Randy',
-      faction: 'warlords of carthus',
-      race: 'lizard folk',
-      alignment: 'chaotic good',
+      background: "No Background",
+      player_name: "also Randy",
+      faction: "warlords of carthus",
+      race: "lizard folk",
+      alignment: "chaotic good",
       exp: 2000,
       inspiration: 1,
       strength: 10,
@@ -47,22 +51,23 @@ module.exports = app => {
       speed: 10,
       current_hp: 200,
       temp_hp: 200,
-      personality_traits: 'Just a regular ol dude',
-      ideals: 'ideally would like to be a coder',
-      bonds: 'no bonds',
-      flaws: 'interrupts people',
-      attacks_and_spellcasting: 'Balrog has lots and lots of powers',
+
+      personality_traits: "Just a regular ol dude",
+      ideals: "ideally would like to be a coder",
+      bonds: "no bonds",
+      flaws: "interrupts people",
+      attacks_and_spellcasting: "Balrog has lots and lots of powers",
       passive_wisdom: 10,
-      equipment: 'hella equipment',
-      features_and_traits: 'featuring Keanu Reeves',
+      equipment: "hella equipment",
+      features_and_traits: "featuring Keanu Reeves",
       other_proficiencies_and_languages:
-        'I told you Balrog has lots and lots of powers English',
+        "I told you Balrog has lots and lots of powers English",
       age: 32,
       height: 6,
       weight: 180,
-      eyes: 'Blue',
-      skin: 'Pale',
-      hair: 'Short and Brown',
+      eyes: "Blue",
+      skin: "Pale",
+      hair: "Short and Brown",
       acrobatics: 10,
       animal_handling: 10,
       arcana: 10,

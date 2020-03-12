@@ -1,4 +1,3 @@
-
 module.exports = (sequelize, DataTypes) => {
   return sequelize.define('character', {
     name: {
@@ -85,7 +84,6 @@ module.exports = (sequelize, DataTypes) => {
     personality_traits: {
       type: DataTypes.STRING
     },
-  
     ideals: {
       type: DataTypes.STRING
     },
@@ -128,79 +126,77 @@ module.exports = (sequelize, DataTypes) => {
     hair: {
       type: DataTypes.STRING
     },
-  
+
     acrobatics: {
       type: DataTypes.INTEGER
     },
-  
+
     animal_handling: {
       type: DataTypes.INTEGER
     },
-  
+
     arcana: {
       type: DataTypes.INTEGER
     },
-  
+
     athletics: {
       type: DataTypes.INTEGER
     },
-  
+
     deception: {
       type: DataTypes.INTEGER
     },
-  
+
     history: {
       type: DataTypes.INTEGER
     },
-  
+
     insight: {
       type: DataTypes.INTEGER
     },
-  
+
     intimidation: {
       type: DataTypes.INTEGER
     },
-  
+
     investigation: {
       type: DataTypes.INTEGER
     },
-  
+
     medicine: {
       type: DataTypes.INTEGER
     },
-  
+
     nature: {
       type: DataTypes.INTEGER
     },
-  
+
     perception: {
       type: DataTypes.INTEGER
     },
-  
+
     performance: {
       type: DataTypes.INTEGER
     },
-  
+
     persuasion: {
       type: DataTypes.INTEGER
     },
-  
+
     religion: {
       type: DataTypes.INTEGER
     },
-  
+
     sleight_of_hand: {
       type: DataTypes.INTEGER
     },
-  
+
     stealth: {
       type: DataTypes.INTEGER
     },
-  
+
     survival: {
       type: DataTypes.INTEGER
     }
   });
 };
-
-
