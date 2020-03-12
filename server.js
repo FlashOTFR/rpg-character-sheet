@@ -1,10 +1,10 @@
 //Dependencies
-const express = require('express');
-const exphbs = require('express-handlebars');
-const bodyParser = require('body-parser');
-const path = require('path');
+const express = require("express");
+const exphbs = require("express-handlebars");
+const bodyParser = require("body-parser");
+const path = require("path");
 
-const db = require('./models');
+const db = require("./models");
 
 //Created Server
 const app = express();
@@ -15,14 +15,17 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 //Handlebars
-app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
-app.set('view engine', 'handlebars');
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
+
+//Body-Parser
+app.use(bodyParser.urlencoded({ extended: false }));
 
 //Set static folder
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, "public")));
 
 //HTML Routes
-app.get('/', (req, res) => res.render('home'));
+app.get("/", (req, res) => res.render("home"));
 
 db.sequelize.sync({ force: true }).then(() => {
   app.listen(PORT, console.log(`Server started on port ${PORT}`));
