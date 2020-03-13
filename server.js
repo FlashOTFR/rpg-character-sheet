@@ -15,11 +15,25 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 //Handlebars
+app.engine('handlebars', exphbs({ defaultLayout: 'main'}));
+app.set('view engine', 'handlebars');
+
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 //Body-Parser
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+
+//HTML Routes
+app.get("/", (req, res) => res.render("home"));
+app.get("/addchar", (req, res) => res.render("addchar"));
+
+
+//HTML Routes
+app.get('/', (req, res) => res.render('home'));
+app.get('/dice', (req, res) => res.render('dice'));
 
 //Set static folder
 app.use(express.static(path.join(__dirname, "public")));
@@ -30,6 +44,7 @@ app.get("/", (req, res) => res.render("home"));
 db.sequelize.sync({ force: true }).then(() => {
   app.listen(PORT, console.log(`Server started on port ${PORT}`));
 });
+
 
 //Database
 // const connection = require('./config/connection');
