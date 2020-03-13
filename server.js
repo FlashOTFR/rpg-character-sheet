@@ -31,7 +31,6 @@ app.get("/characters", (req, res) => {
     db.character
       .findAll()
       .then(characters => {
-        console.log(characters.dexterity);
         res.render('characters', {
           characters
         });

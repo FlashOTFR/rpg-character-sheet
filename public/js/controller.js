@@ -3,12 +3,20 @@
 
 $( document ).ready(function() {
   $('.delBtn').on("click", deleteCharacter);
-  
-  
+  $('.shoBtn').on('click', checkFunc);
   $('#create-button').on('click', createCharacter);
   
   
   
+  function checkFunc(event) {
+    console.log('button pressed');
+    const id = $(this).data(`id`);
+    console.log('this is your id: ' + id);
+    $.ajax({
+      method: 'GET',
+      url: `/api/characters/${id}`
+    }).then(console.log('route hit'));
+  };
   
   //DELETE function
   

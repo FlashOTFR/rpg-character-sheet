@@ -84,9 +84,20 @@ module.exports = app => {
     res.send(200);
   });
 
+  //FINDONE character
+
+  app.get('/api/characters/:id', (req, res) => {
+
+      db.character.findone({
+      where: {
+      id: req.params.id
+      }
+    }).then(result => res.render('singlechar', { result }));    
+  });
+
   
   //UPDATE Character
-  app.put(`/api/characters`, (req, res) => {
+  app.put(`/api/yourchar`, (req, res) => {
       db.character.update(
       {
         name: req.body.name,
