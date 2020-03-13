@@ -20,3 +20,20 @@ function deleteCharacter(event) {
     });
   };
 
+//POST function
+
+function createCharacter {
+
+};
+
+//PUT function
+
+function updateCharacter {
+
+};
+
+//GET ONE function
+
+function getCharacter {
+
+};
