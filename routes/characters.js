@@ -1,23 +1,24 @@
 "use strict";
 
-const express = require("express");
-const connection = require("../config/connection");
+
 const db = require("../models");
 
 module.exports = app => {
   //DELETE Character
   app.delete(`/api/characters/:id`, (req, res) => {
+    let id = req.params.id;
+    console.log(id);
     db.character.destroy({
       where: {
         id: req.params.id
       }
     }).then(dbCharacter => {
-      res.render("characters");
+      console.log('success to this point');
     });
   });
 
   //CREATE new character
-  app.post("/api/newchar", (req, res) => {
+  app.post("/api/characters", (req, res) => {
     db.character.create({
       name: req.body.name,
       class: req.body.class,
@@ -83,9 +84,20 @@ module.exports = app => {
     res.send(200);
   });
 
+  //FINDONE character
+
+  app.get('/api/characters/:id', (req, res) => {
+
+      db.character.findone({
+      where: {
+      id: req.params.id
+      }
+    }).then(result => res.render('singlechar', { result }));    
+  });
+
   
   //UPDATE Character
-  app.put(`/api/characters`, (req, res) => {
+  app.put(`/api/yourchar`, (req, res) => {
       db.character.update(
       {
         name: req.body.name,

@@ -18,9 +18,6 @@ app.use(express.json());
 app.engine('handlebars', exphbs({ defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-app.set("view engine", "handlebars");
-
 //Body-Parser
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -34,7 +31,6 @@ app.get("/characters", (req, res) => {
     db.character
       .findAll()
       .then(characters => {
-        console.log(characters.dexterity);
         res.render('characters', {
           characters
         });
