@@ -29,26 +29,28 @@ app.use(bodyParser.json());
 //HTML Routes
 app.get("/", (req, res) => res.render("home"));
 app.get("/addchar", (req, res) => res.render("addchar"));
+
+
+//HTML Routes
+app.get('/', (req, res) => res.render('home'));
 app.get('/dice', (req, res) => res.render('dice'));
-app.get("/characters", (req, res) => {
-    db.character
-      .findAll()
-      .then(characters => {
-        console.log(characters.dexterity);
-        res.render('characters', {
-          characters
-        });
-      })
-      .catch(err => console.log(err));
-  });
 
 //Set static folder
 app.use(express.static(path.join(__dirname, "public")));
 
-//Server listener
+//HTML Routes
+app.get("/", (req, res) => res.render("home"));
+
 db.sequelize.sync({ force: true }).then(() => {
   app.listen(PORT, console.log(`Server started on port ${PORT}`));
 });
 
-require(`./routes/characters.js`)(app);
 
+//Database
+// const connection = require('./config/connection');
+
+//Database connection test
+// connection.authenticate().then(() => console.log('Database Connected...')).catch(err => console.log('Error' + err));
+
+require(`./routes/characters.js`)(app);
+//Server listener

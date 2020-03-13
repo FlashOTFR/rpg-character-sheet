@@ -3,7 +3,7 @@ const Sequelize = require('sequelize');
 
 
 //Exported Database Connection
-module.exports = new Sequelize('character_db', 'root', 'Issouf03', {
+module.exports = new Sequelize('character_db', 'root', '5eku+aya', {
   host: 'localhost',
   dialect: 'mysql',
 
