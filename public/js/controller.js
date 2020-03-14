@@ -180,5 +180,4 @@ function updateChar(event){
   $.put(`/api/yourchar/`, character);
   console.log('character created');
   location.reload();
-}
-});
+};
