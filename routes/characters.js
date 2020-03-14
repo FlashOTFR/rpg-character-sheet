@@ -101,9 +101,11 @@ module.exports = app => {
 
   
   //UPDATE Character
-  app.put(`/api/singlechar/`, (req, res) => {
+  app.put(`/api/characters`, (req, res) => {
     let character = req.body;
-    console.log('request received ' + req.body);
+    console.log(`char name: ${character.name}`)
+    console.log(`char id: ${character.id}`)
+    console.log('request received ' + req.body.name);
       db.character.update(
       {
         name: character.name,
@@ -172,8 +174,12 @@ module.exports = app => {
           id: character.id
         }
       }
-    ).then(data => console.log(data))
+    ).then(data => {
+      console.log('\n\n\n\n\n\n\n\nrequest complete');
+      res.json(data)
+    })
       .catch(err => {
+        console.log('error!!\n\n\n', err);
         res.send(err);
       });
   });
