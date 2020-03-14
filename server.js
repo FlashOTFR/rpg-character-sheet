@@ -15,8 +15,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 //Handlebars
-app.engine('handlebars', exphbs({ defaultLayout: 'main'}));
-app.set('view engine', 'handlebars');
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
 
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
@@ -25,22 +25,21 @@ app.set("view engine", "handlebars");
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-
 //HTML Routes
 app.get("/", (req, res) => res.render("home"));
 app.get("/addchar", (req, res) => res.render("addchar"));
-app.get('/dice', (req, res) => res.render('dice'));
+app.get("/dice", (req, res) => res.render("dice"));
 app.get("/characters", (req, res) => {
-    db.character
-      .findAll()
-      .then(characters => {
-        console.log(characters.dexterity);
-        res.render('characters', {
-          characters
-        });
-      })
-      .catch(err => console.log(err));
-  });
+  db.character
+    .findAll()
+    .then(characters => {
+      console.log(characters.dexterity);
+      res.render("characters", {
+        characters
+      });
+    })
+    .catch(err => console.log(err));
+});
 
 //Set static folder
 app.use(express.static(path.join(__dirname, "public")));
@@ -51,4 +50,3 @@ db.sequelize.sync({ force: true }).then(() => {
 });
 
 require(`./routes/characters.js`)(app);
-

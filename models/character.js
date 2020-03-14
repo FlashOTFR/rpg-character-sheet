@@ -1,5 +1,6 @@
+//Sequelize version of character
 module.exports = (sequelize, DataTypes) => {
-  return sequelize.define('character', {
+  return sequelize.define("character", {
     name: {
       type: DataTypes.STRING
     },
