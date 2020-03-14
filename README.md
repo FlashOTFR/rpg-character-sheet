@@ -1,4 +1,4 @@
-# project2
+# D&D Character Generator - Project 2
 
 This application simulates the character generated portions of the Dungeons and Dragons RPG game. Simply view all of your created characters, create a new character, and roll the dice!
 
