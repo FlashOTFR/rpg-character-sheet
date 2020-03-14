@@ -1,19 +1,19 @@
 class CreateCharacter {
-    constructor (name, type, background){
+    constructor (name, role, background){
         if (!name){
             throw new Error("Please enter a name for your character.")
 
         }
-        if (!type){
-            throw new Error("Please enter a character class-type.")
+        if (!role){
+            throw new Error("Please enter a character role.")
         }
         if (!background){
             throw new Error("please enter a character background story.")
         
         }
-        this.name = Name;
-        this.type = Class-Type;
-        this.background = Background;
+        this.name = name;
+        this.type = role;
+        this.background = background;
         
     }
 

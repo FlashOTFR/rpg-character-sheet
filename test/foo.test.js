@@ -1,11 +1,11 @@
-// "use strict";
+"use strict";
 
-// describe(`jest test`, () => {
-//   it(`should pass`, () => {
-//     expect(1 + 2).toEqual(3);
-//   });
+describe(`jest test`, () => {
+  it(`should pass`, () => {
+    expect(1 + 2).toEqual(3);
+  });
 
-//   it("should fail", () => {
-//     expect("1" + "1").toEqual(2);
-//   });
-// });
+  it("should fail", () => {
+    expect(1 + 1).toEqual(2);
+  });
+});
