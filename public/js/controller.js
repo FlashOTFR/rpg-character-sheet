@@ -178,7 +178,7 @@ function updateChar(event){
   };
   console.log(character);
   $.ajax({ url: '/api/singlechar', type: 'PUT', data: character, success: function(data) {
-    console.log('character updated');
-    location.reload();
+    console.log('request sent');
+    // location.reload();
   }});
 };
