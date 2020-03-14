@@ -101,7 +101,7 @@ module.exports = app => {
 
   
   //UPDATE Character
-  app.put(`/api/yourchar`, (req, res) => {
+  app.put(`/api/yourchar/`, (req, res) => {
       db.character.update(
       {
         name: req.body.name,
@@ -171,11 +171,9 @@ module.exports = app => {
         }
       }
     )
-      .then(dbCharacter => {
-        res.json(dbCharacter);
-      })
+      .then(res.send(200))
       .catch(err => {
-        res.json(err);
+        res.send(err);
       });
   });
  
