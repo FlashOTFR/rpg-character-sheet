@@ -94,6 +94,7 @@ module.exports = app => {
       id: id
       }
     }).then(characters => {
+      console.log(characters);
       res.render('singlechar', {characters});})
     .catch(err => console.log(err));
   });
