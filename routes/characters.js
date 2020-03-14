@@ -101,7 +101,7 @@ module.exports = app => {
 
   
   //UPDATE Character
-  app.put(`/api/yourchar/`, (req, res) => {
+  app.put(`/api/singlechar/`, (req, res) => {
       db.character.update(
       {
         name: req.body.name,
