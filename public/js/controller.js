@@ -4,8 +4,8 @@
 $( document ).ready(function() {
   $('.delBtn').on("click", deleteCharacter);
   $('.shoBtn').on('click', singleChar);
+  $('#update-button').on('click', updateChar);
   $('#create-button').on('click', createCharacter);
-  $('#update-button').on('click', console.log('update button pressed'));
 
   //DELETE function
   
@@ -177,7 +177,8 @@ function updateChar(event){
       
   };
   console.log(character);
-  $.put(`/api/yourchar/`, character);
-  console.log('character created');
-  location.reload();
+  $.ajax({ url: '/api/singlechar', type: 'PUT', data: character, success: function(data) {
+    console.log('request sent');
+    // location.reload();
+  }});
 };
