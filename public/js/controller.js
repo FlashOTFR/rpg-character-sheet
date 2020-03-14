@@ -114,6 +114,7 @@ function updateChar(event){
   const id = $(this).data(`id`);
   console.log('this is your id ' + id);
   const character = {
+    id: id,
     name: $('#character-name').val(),
     class: $('#character-class').val(),
     level: $('#character-level').val(),
@@ -177,7 +178,7 @@ function updateChar(event){
       
   };
   console.log(character);
-  $.ajax({ url: '/api/singlechar', type: 'PUT', data: character, success: function(data) {
+  $.ajax({ url: '/api/characters', method: 'PUT', data: character, success: function(data) {
     console.log('request sent');
     // location.reload();
   }});
