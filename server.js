@@ -31,10 +31,7 @@ app.get("/characters", (req, res) => {
     db.character
       .findAll()
       .then(characters => {
-        res.render('characters', {
-          characters
-        });
-      })
+        res.render('characters', {characters});})
       .catch(err => console.log(err));
   });
 

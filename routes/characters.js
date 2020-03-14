@@ -86,13 +86,17 @@ module.exports = app => {
 
   //FINDONE character
 
-  app.get('/api/characters/:id', (req, res) => {
-
-      db.character.findone({
+  app.get('/characters/:id', (req, res) => {
+    console.log('query received');
+    const id = req.params.id;
+    db.character.findOne({
       where: {
-      id: req.params.id
+      id: id
       }
-    }).then(result => res.render('singlechar', { result }));    
+    }).then(characters => {
+      console.log(characters);
+      res.render('singlechar', {characters});})
+    .catch(err => console.log(err));
   });
 
   
