@@ -5,8 +5,16 @@ This application simulates the character generated portions of the Dungeons and 
 <h1>Overview:</h1>
 The application has been built with many of the new technologies and languages we've covered in the second half of the UW Bootcamp. Design makeup includes an MVC paradigm and a server side API. The major focus of Project 2 was centered around testing cases, continuous integration, linting, and maximizing code coverage.
 
+<h1>Business Context:</h1>
+AS A Dungeon Master
+I WANT to keep track of resources in an efficient way
+SO that I can set up games faster and help beginners play
+
 <h1>UML Diagram:</h1>
 https://drive.google.com/file/d/1Qx0GK0dT_CXxDCYtVbg7yRo4MlYmPclW/view?usp=sharing
+
+<h1>Screencastify Demo:</h1>
+https://drive.google.com/file/d/1DYOp2nxmHZBGwQElDAlaDxsG9dvTjNDC/view
 
 <h1>Character Generator Inspiration:</h1>
 We derived our application from the D&D Character Generator template. Below is an example:
